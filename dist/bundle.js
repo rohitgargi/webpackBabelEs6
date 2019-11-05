@@ -95,9 +95,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_style_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
-var student1 = new _student__WEBPACK_IMPORTED_MODULE_0__["default"]("Rohit", 12);
+var student1 = new _student__WEBPACK_IMPORTED_MODULE_0__["default"]("Rohit", 12, 14);
 var des = "ES6 setup is done by ".concat(student1.name);
-document.write(des);
+var age = student1.getAge();
+document.write(age);
 
 /***/ }),
 /* 1 */
@@ -107,12 +108,31 @@ document.write(des);
 __webpack_require__.r(__webpack_exports__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Student = function Student(name, cls) {
-  _classCallCheck(this, Student);
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-  this.name = name;
-  this.cls = cls;
-};
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Student =
+/*#__PURE__*/
+function () {
+  function Student(name, cls, age) {
+    _classCallCheck(this, Student);
+
+    this.name = name;
+    this.cls = cls;
+    this.age = age;
+    '';
+  }
+
+  _createClass(Student, [{
+    key: "getAge",
+    value: function getAge() {
+      return this.age;
+    }
+  }]);
+
+  return Student;
+}();
 
 /* harmony default export */ __webpack_exports__["default"] = (Student);
 
